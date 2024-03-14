@@ -10,7 +10,6 @@ public class Card {
     public Card(Shape shape) {
 
         this.shape = shape;
-
     }
 
     public Shape getShape() {
