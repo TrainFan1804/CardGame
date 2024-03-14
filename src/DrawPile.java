@@ -14,5 +14,14 @@ public class DrawPile extends Pile {
 
         throw new UnsupportedOperationException("Unimplemented method 'addCard'");
     }
+
+    public void mischen() {
+
+    }
+
+    public boolean isEmpty() {
+
+        return this.cardPile.isEmpty();
+    }
     
 }

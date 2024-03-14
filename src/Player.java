@@ -6,7 +6,6 @@ public class Player {
     
     public Player() {
 
-
     }
 
     public int shop(Game g) {

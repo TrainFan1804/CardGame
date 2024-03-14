@@ -4,6 +4,8 @@
  */
 public class Game {
 
+    private Mode currentMode;
+    
     public Game(int maxRounds) {
         
     }
@@ -77,5 +79,5 @@ public class Game {
 
         return null;
     }
-    
+
 }

@@ -14,5 +14,10 @@ public class DiscardPile extends Pile{
 
         throw new UnsupportedOperationException("Unimplemented method 'addCard'");
     }
+
+    public void clear() {
+
+        this.cardPile.clear();
+    }
     
 }
