@@ -10,7 +10,7 @@ public class DrawPile extends Pile {
     }
     
     @Override
-    protected boolean addCard(Card newCard) {
+    protected void addCard(Card newCard) {
 
         throw new UnsupportedOperationException("Unimplemented method 'addCard'");
     }
