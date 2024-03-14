@@ -16,14 +16,22 @@ public class CreditScore {
         return this.credits;
     }
 
-    public void setCredits(int credits) {
+    public void addCredits(int credits) {
 
         if (credits < 0) {
 
             return;
         }
-        
+
         this.credits += credits;
+    }
+
+    public void removeCredits(int credits) {
+
+        if (this.credits - credits >= 0) {
+
+            this.credits -= credits;
+        }
     }
     
 }
