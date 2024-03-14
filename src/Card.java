@@ -10,18 +10,20 @@ public class Card {
     public Card(Shape shape) {
 
         this.shape = shape;
-
     }
 
     public Shape getShape() {
-        return shape;
+
+        return this.shape;
     }
 
     public double getPoint() {
-        return point;
+
+        return this.point;
     }
 
     public String getName() {
+        
         return null;
     }
     
