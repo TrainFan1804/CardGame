@@ -16,12 +16,12 @@ public class Hand {
 
     public Card getHandCard(int handCardIndex) {
 
-        return handCards.get(handCardIndex);
+        return this.handCards.get(handCardIndex);
     }
 
     public int getHandCardsCount() {
 
-        return handCards.size();
+        return this.handCards.size();
     }
 
     public Shape getTopShape() {
@@ -31,6 +31,6 @@ public class Hand {
 
     public void play(Card card, int stackIndex) {
         
-        handCards.remove(card);
+        this.handCards.remove(card);
     }
 }
