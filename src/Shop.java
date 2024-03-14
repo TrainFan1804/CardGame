@@ -4,4 +4,16 @@
  */
 public class Shop {
     
+    private Card[] shopCards;
+
+    public int buy(int shopItemIndex) {
+
+        return 0;
+    }
+
+    public boolean depositDrawPile() {
+
+        return false;
+    }
+
 }

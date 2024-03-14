@@ -4,4 +4,21 @@
  */
 public class CreditScore {
 
+    private int credits;
+
+    public CreditScore(int score) {
+
+        this.credits = score;
+    }
+
+    public int getCredits() {
+
+        return this.credits;
+    }
+
+    public void setCredits(int credits) {
+
+        this.credits += credits;
+    }
+    
 }
