@@ -1,12 +1,32 @@
+import java.util.ArrayList;
+
 public class Hand {
     
-    private Card[] handCards;
+    private ArrayList<Card> handCards;
 
     public Hand() {
 
-        this.handCards = new Card[5];
+        this.handCards = new ArrayList<Card>();
 
     }
 
-    
+    public Card getHandCard(int handCardIndex) {
+
+        return handCards.get(handCardIndex);
+    }
+
+    public int getHandCardsCount() {
+
+        return handCards.size();
+    }
+
+    public Shape getTopShape() {
+
+        return null;
+    }
+
+    public void play(Card card, int stackIndex) {
+        
+        handCards.remove(card);
+    }
 }
