@@ -4,4 +4,7 @@
  */
 public abstract class Pile {
 
+    protected Card[] cardPile;
+
+    protected abstract boolean addCard(Card newCard);
 }
