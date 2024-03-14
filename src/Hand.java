@@ -11,7 +11,6 @@ public class Hand {
     public Hand() {
 
         this.handCards = new ArrayList<Card>();
-
     }
 
     public Card getHandCard(int handCardIndex) {
