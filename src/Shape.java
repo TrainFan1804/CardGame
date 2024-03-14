@@ -4,4 +4,7 @@
  */
 public enum Shape {
 
+    STAR,
+    CIRCLE,
+    SQUARE
 }
