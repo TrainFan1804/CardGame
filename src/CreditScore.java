@@ -18,6 +18,11 @@ public class CreditScore {
 
     public void setCredits(int credits) {
 
+        if (credits < 0) {
+
+            return;
+        }
+        
         this.credits += credits;
     }
     
