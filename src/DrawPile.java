@@ -4,9 +4,14 @@
  */
 public class DrawPile extends Pile {
 
+    public DrawPile() {
+
+        super(0);
+    }
+    
     @Override
     protected boolean addCard(Card newCard) {
-        
+
         throw new UnsupportedOperationException("Unimplemented method 'addCard'");
     }
     

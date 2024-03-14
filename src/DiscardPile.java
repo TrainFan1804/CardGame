@@ -4,6 +4,11 @@
  */
 public class DiscardPile extends Pile{
 
+    public DiscardPile() {
+
+        super(0);
+    }
+    
     @Override
     protected boolean addCard(Card newCard) {
 
