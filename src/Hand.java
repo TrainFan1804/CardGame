@@ -11,5 +11,4 @@ public class Hand {
         this.handCards = new Card[5];
     }
 
-    
 }

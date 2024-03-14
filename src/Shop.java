@@ -6,6 +6,11 @@ public class Shop {
     
     private Card[] shopCards;
 
+    public Shop() {
+
+        this.shopCards = new Card[5];
+    }
+
     public int buy(int shopItemIndex) {
 
         return 0;
