@@ -9,7 +9,7 @@ public abstract class Pile {
 
     protected ArrayList<Card> cardPile;
     
-    protected abstract boolean addCard(Card newCard);
+    protected abstract void addCard(Card newCard);
     
     protected Pile(int size) {
 
