@@ -4,30 +4,21 @@
  */
 public class Card {
 
-    private Shape Shape;
+    private Shape shape;
     private double point;
 
-    public Card(Shape shape, double point) {
+    public Card(Shape shape) {
 
-        this.Shape = shape;
-        this.point = point;
+        this.shape = shape;
 
     }
 
     public Shape getShape() {
-        return Shape;
-    }
-
-    public void setShape(Shape shape) {
-        Shape = shape;
+        return shape;
     }
 
     public double getPoint() {
         return point;
-    }
-
-    public void setPoint(double point) {
-        this.point = point;
     }
 
     public String getName() {
