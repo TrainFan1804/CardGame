@@ -9,7 +9,6 @@ public class Hand {
     public Hand() {
 
         this.handCards = new Card[5];
-
     }
 
     

@@ -8,11 +8,12 @@ import java.util.ArrayList;
 public abstract class Pile {
 
     protected ArrayList<Card> cardPile;
-
+    
+    protected abstract boolean addCard(Card newCard);
+    
     protected Pile(int size) {
 
         this.cardPile = new ArrayList<>();
-    }
-
-    protected abstract boolean addCard(Card newCard);
+    }    
+        
 }
