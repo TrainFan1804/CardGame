@@ -7,10 +7,9 @@ public class Card {
     private Shape shape;
     private double point;
 
-    public Card(Shape shape, double point) {
+    public Card(Shape shape) {
 
         this.shape = shape;
-        this.point = point;
 
     }
 
@@ -19,19 +18,9 @@ public class Card {
         return this.shape;
     }
 
-    public void setShape(Shape shape) {
-
-        this.shape = shape;
-    }
-
     public double getPoint() {
 
         return this.point;
-    }
-
-    public void setPoint(double point) {
-
-        this.point = point;
     }
 
     public String getName() {
