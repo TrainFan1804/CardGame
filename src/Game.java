@@ -2,9 +2,6 @@
  * @author g.ary, o.le
  * @since 13.03.2024
  */
-
- // Ich finde hier fehlen noch ein paar commits
- 
 public class Game {
 
     private Mode currentMode;
