@@ -4,9 +4,6 @@ import java.util.ArrayList;
  * @author g.ary, o.le
  * @since 13.03.2024
  */
-
-  // Ich finde hier fehlen noch ein paar commits
- 
 public class Hand {
     
     private ArrayList<Card> handCards;
