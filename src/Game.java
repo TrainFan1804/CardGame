@@ -17,7 +17,7 @@ public class Game {
 
     public Mode getMode() {
 
-        return null;
+        return this.currentMode;
     }
 
     public int getStackCound() {
