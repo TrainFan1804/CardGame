@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-05T20:25:44.915Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="xjR1pBc34PM5FzexyDru" version="24.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-05T20:26:57.282Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="IVnGWvWRAf82r-cxWxSi" version="24.2.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2297" dy="2082" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2425" dy="2265" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -393,6 +393,14 @@
         <mxCell id="msibaPADLrbXCp9h_xWd-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=diamondThin;startFill=1;startSize=10;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="msibaPADLrbXCp9h_xWd-47" target="msibaPADLrbXCp9h_xWd-41">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="msibaPADLrbXCp9h_xWd-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="msibaPADLrbXCp9h_xWd-47" target="msibaPADLrbXCp9h_xWd-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msibaPADLrbXCp9h_xWd-63" value="mode" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="msibaPADLrbXCp9h_xWd-62">
+          <mxGeometry x="0.638" y="1" relative="1" as="geometry">
+            <mxPoint x="14" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="msibaPADLrbXCp9h_xWd-47" value="&lt;div&gt;Game&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-413" y="808" width="250" height="560" as="geometry" />
         </mxCell>
@@ -406,7 +414,7 @@
           <mxGeometry y="188" width="250" height="372" as="geometry" />
         </mxCell>
         <mxCell id="msibaPADLrbXCp9h_xWd-51" value="&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;div&gt;Mode&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="293" y="640" width="140" height="80" as="geometry" />
+          <mxGeometry x="-358" y="1430" width="140" height="80" as="geometry" />
         </mxCell>
         <mxCell id="msibaPADLrbXCp9h_xWd-52" value="SHOPPING&lt;div&gt;PLAYING&lt;/div&gt;&lt;div&gt;END&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;labelBackgroundColor=none;" vertex="1" parent="msibaPADLrbXCp9h_xWd-51">
           <mxGeometry y="29" width="140" height="51" as="geometry" />
