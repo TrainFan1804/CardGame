@@ -1,5 +1,6 @@
 package cardmaster.cards;
 
+// java import
 import cardmaster.Shape;
 
 /**
@@ -24,20 +25,45 @@ import cardmaster.Shape;
  */
 public class Card {
 
+	String name;
+	Shape shape;
+	int price;
+
 	public Card(Shape shape) {
+
+		this.shape = shape;
+		this.name = "Chance";
 	}
 
 	/**
 	 * Gibt die Form der Karte zurück.
 	 */
 	public Shape getShape() {
-		return null; // TODO
+
+		return this.shape;
 	}
 
 	/**
 	 * Gibt den Namen der Karte zurück. z.B.: Chance
 	 */
 	public String getName() {
-		return null; // TODO
+
+		return this.name;
 	}
+
+	public int getPrice() {
+
+		return this.price;
+	}
+
+	public void setPrice(int newPrice) {
+		this.price = newPrice;
+	}
+
+	@Override
+	public String toString() {
+
+		return "Card [shape=" + this.shape.toString() + ", name=" + this.name + "]";
+	}
+
 }
