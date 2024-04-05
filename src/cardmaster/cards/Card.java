@@ -29,6 +29,11 @@ public class Card {
 	Shape shape;
 	int price;
 
+	/**
+	 * Stellt eine Karte her, mit der übergebenen {@link Shape}. Standardmäßig wird das {@code name} Feld auf "Chance" gesetzt.
+	 * 
+	 * @param shape Die gesetzte {@code Shape} der erstellen Karte
+	 */
 	public Card(Shape shape) {
 
 		this.shape = shape;
@@ -37,6 +42,8 @@ public class Card {
 
 	/**
 	 * Gibt die Form der Karte zurück.
+	 * 
+	 * @return Die Shape der Karte
 	 */
 	public Shape getShape() {
 
@@ -45,17 +52,29 @@ public class Card {
 
 	/**
 	 * Gibt den Namen der Karte zurück. z.B.: Chance
+	 * 
+	 * @return Die Art der Karte als {@code String}
 	 */
 	public String getName() {
 
 		return this.name;
 	}
 
+	/**
+	 * Gibt den Preis der Karte zurück.
+	 * 
+	 * @return Der Preis der Karte als {@code int}
+	 */
 	public int getPrice() {
 
 		return this.price;
 	}
 
+	/**
+	 * Setzt den Wert der Karte. Siehe {@link Shop#generateNewCards())}
+	 * 
+	 * @return Die Art der Karte als {@code String}
+	 */
 	public void setPrice(int newPrice) {
 		this.price = newPrice;
 	}

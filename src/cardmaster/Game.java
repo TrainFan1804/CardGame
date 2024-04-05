@@ -1,10 +1,8 @@
 package cardmaster;
 
-import static cardmaster.TestUtils.createGameWithChanceCard;
-
-import java.util.HashSet;
+// java import
 import java.util.Set;
-
+import java.util.HashSet;
 // custom import
 import cardmaster.cards.Card;
 
@@ -24,26 +22,6 @@ import cardmaster.cards.Card;
  * passen fünf Gegenstände in den Shop.
  */
 public class Game {
-
-	public static void main(String[] args) {
-		
-		// Game g = new Game(10);
-
-		// g.buy(1);
-		// g.endShopping();
-		// g.play(g.getHandCard(0), 0);
-
-		final var game = createGameWithChanceCard(1000, true);
-
-		//Game game = new Game(10);
-		while (game.getMode() != Mode.END) {
-			// Runden werden gespielt
-			
-			game.endShopping();
-			game.play(game.getHandCard(0), 0);
-
-		}
-	}
 
 	private final static int MAXDISCARDPILES = 3;
 
@@ -104,6 +82,8 @@ public class Game {
 
 	/**
 	 * Gibt den aktuellen Punktestand zurück.
+	 * 
+	 * @return Die aktuellen Credits des Spielers als {@code double}
 	 */
 	public double getCredits() {
 		
@@ -112,6 +92,8 @@ public class Game {
 
 	/**
 	 * Gibt den aktuellen Modus zurück.
+	 * 
+	 * @return Den aktuellen Mode
 	 */
 	public Mode getMode() {
 		
@@ -132,6 +114,9 @@ public class Game {
 	//	Methoden für die Piles	//
 	//////////////////////////////
 
+	/**
+	 * Leert die {@link Game#discardPile}
+	 */
 	public void clearDiscardPile() {
 
 		for (int i = 0; i < this.discardPile.length; i++) {
@@ -143,11 +128,17 @@ public class Game {
 		}
 	}
 
+	/**
+	 * Mischt den {@link Game#drawPile}
+	 */
 	public void ziehstapelMischen() {
 
 		this.drawPile.mischen();
 	}
 
+	/**
+	 * Nimmt die erste Karte aus dem {@link Game#drawPile} und steckt sie in die {@link Game#playerHand}
+	 */
 	private void drawCardFromPileIntoHand() {
 
 		// fülle die Hand mit den 4 oberen Karten vom Drawpile
@@ -318,6 +309,9 @@ public class Game {
 	//	Methoden für den Playing-Modus	//
 	//////////////////////////////////////
 
+	/**
+	 * Initialisiert die Playing-Phase
+	 */
 	private void startPlaying() {
 		
 		this.clearDiscardPile();
@@ -380,6 +374,12 @@ public class Game {
 		}
 	}
 
+	/**
+	 * Überprüft, ob ein gültiger {@link Game#discardPile} ausgewählt wurde
+	 * 
+	 * @param stackIndex Der Index, vom einem der Ablagestapel
+	 * @return {@code true}, wenn der {@code stackIndex} gültig war, sonst {@code false}
+	 */
 	private boolean stackIndexOutOfBounds(int stackIndex) {
 		
 		if (stackIndex < 0 || stackIndex >= this.discardPile.length) { // Annahme, dass discardPile ein Array ist
@@ -390,6 +390,12 @@ public class Game {
 		return false;
 	}
 
+	/**
+	 * Überprüft, ob ein Karte in der {@link Game#playHand} ist
+	 * 
+	 * @param card Die Karte, die überprüft wird
+	 * @return {@code true}, wenn die {@code card} in der Hand ist, sonst {@code false}
+	 */
 	private boolean cardIsNotOnHand(Card card) {
 		
 		for (int i = 0; i < this.playerHand.getHandCardsCount(); i++) {
@@ -403,6 +409,9 @@ public class Game {
 		return true;
 	}
 
+	/**
+	 * Berechnet die Kredits nach jeder Runde
+	 */
 	private void calcCredits() {
  
 		// ausrechnen, wie viele piles leer sind (nur für Chance Karten, siehe Aufgabe)
@@ -448,6 +457,9 @@ public class Game {
 		return this.playerHand.getHandCard(handCardIndex);
 	}
 
+	/**
+	 * Eine Enum für die verfügbaren Phasen
+	 */
 	public enum Mode {
 
 		SHOPPING, PLAYING, END;

@@ -1,9 +1,8 @@
 package cardmaster;
 
-
 // java import
 import java.util.Scanner;
-
+// custom import
 import cardmaster.Game.Mode;
 
 /**
@@ -23,7 +22,7 @@ public class Player {
 	public int shop(Game game) {
 		
 		game.setMode(Mode.SHOPPING);
-		game.generateNewCardInShop();
+		// game.generateNewCardInShop();
 
 		// hier wird mit shop interagiert
 		
