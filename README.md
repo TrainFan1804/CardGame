@@ -1,3 +1,3 @@
 # CardGame
 
-Hier drinnen ist ein schönes UML 2.5 Diagramm. Ebenfalls ist hier der passende Code drinnen, der mithilfe des UML 2.5 Diagramm erstellt wurde.
+Das ist ein Java Projekt, welches ein Kartenspiel beinhaltet. Hier ist ebenfalls ein UML 2.5 Diagramm für dieses Spiel drinnen.
