@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-23T07:27:02.644Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0" etag="NdzttDUcDp1yGD8TZ-AV" version="24.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-23T07:27:32.383Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0" etag="kgkCktquXYg26lZ2sqPz" version="24.2.7" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="3455" dy="1677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -237,7 +237,7 @@
         <mxCell id="sl92Uqs-ZGOxor6MEnUH-9" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;div&gt;Item&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-1360" y="-30" width="140" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="sl92Uqs-ZGOxor6MEnUH-10" value="SHOPPING&lt;div&gt;PLAYING&lt;/div&gt;&lt;div&gt;END&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;labelBackgroundColor=none;" vertex="1" parent="sl92Uqs-ZGOxor6MEnUH-9">
+        <mxCell id="sl92Uqs-ZGOxor6MEnUH-10" value="&lt;div&gt;+ calcPrice(double): void&lt;/div&gt;&lt;div&gt;+ getPrice(): double&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;labelBackgroundColor=none;" vertex="1" parent="sl92Uqs-ZGOxor6MEnUH-9">
           <mxGeometry y="29" width="140" height="51" as="geometry" />
         </mxCell>
         <mxCell id="sl92Uqs-ZGOxor6MEnUH-17" value="Chance" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
