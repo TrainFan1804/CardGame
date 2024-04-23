@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-23T07:13:34.774Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0" etag="2JREsCV0MiaozcaZpI_9" version="24.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-23T07:17:11.760Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0" etag="eAbPQoF9EoQR8ArwOY3E" version="24.2.7" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="3455" dy="1677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -155,16 +155,16 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="msibaPADLrbXCp9h_xWd-47" value="&lt;div&gt;Game&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-683" y="338" width="250" height="560" as="geometry" />
+          <mxGeometry x="-683" y="338" width="250" height="600" as="geometry" />
         </mxCell>
-        <mxCell id="msibaPADLrbXCp9h_xWd-48" value="&lt;u&gt;- MAXDISCARDPILES: int&lt;/u&gt;&lt;div&gt;- currentRound: int&lt;/div&gt;&lt;div&gt;- maxRounds: int&lt;/div&gt;&lt;div&gt;- credits: double&lt;/div&gt;&lt;div&gt;- mode: Mode&lt;/div&gt;&lt;div&gt;- shop: Shop&lt;/div&gt;&lt;div&gt;- playerHand: Hand&lt;/div&gt;&lt;div&gt;- drawPile: DrawPile&lt;/div&gt;&lt;div&gt;- discardPile: Ablagestapel[]&lt;/div&gt;&lt;div&gt;- boughtOnce: boolean&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="msibaPADLrbXCp9h_xWd-47" vertex="1">
-          <mxGeometry y="26" width="250" height="154" as="geometry" />
+        <mxCell id="msibaPADLrbXCp9h_xWd-48" value="&lt;u&gt;- MAXDISCARDPILES: int&lt;/u&gt;&lt;div&gt;- currentRound: int&lt;/div&gt;&lt;div&gt;- maxRounds: int&lt;/div&gt;&lt;div&gt;- credits: double&lt;/div&gt;&lt;div&gt;- mode: Mode&lt;/div&gt;&lt;div&gt;- shop: Shop&lt;/div&gt;&lt;div&gt;- playerHand: Hand&lt;/div&gt;&lt;div&gt;- drawPile: DrawPile&lt;/div&gt;&lt;div&gt;- discardPile: Ablagestapel[]&lt;/div&gt;&lt;div&gt;- boughtOnceCard: boolean&lt;/div&gt;&lt;div&gt;+ factory: CardFactory&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="msibaPADLrbXCp9h_xWd-47" vertex="1">
+          <mxGeometry y="26" width="250" height="194" as="geometry" />
         </mxCell>
         <mxCell id="msibaPADLrbXCp9h_xWd-49" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;labelBackgroundColor=none;" parent="msibaPADLrbXCp9h_xWd-47" vertex="1">
-          <mxGeometry y="180" width="250" height="8" as="geometry" />
+          <mxGeometry y="220" width="250" height="8" as="geometry" />
         </mxCell>
         <mxCell id="msibaPADLrbXCp9h_xWd-50" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ Game(int)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ wasLastRound(): boolean&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ getCredits(): double&lt;/div&gt;&lt;div&gt;+ getMode(): Mode&lt;/div&gt;&lt;div&gt;+ setMode(Mode)&lt;/div&gt;&lt;div&gt;+ clearDiscardPile()&lt;/div&gt;&lt;div&gt;+ ziehstapelMischen()&lt;/div&gt;&lt;div&gt;- drawCardFromPileIntoHand()&lt;/div&gt;&lt;div&gt;- calcNotEmptyPiles(): double&lt;/div&gt;&lt;div&gt;+ isDrawPileEmpty(): boolean&lt;/div&gt;&lt;div&gt;+ getStacksCount(): int&lt;/div&gt;&lt;div&gt;+ getTopShaped(): Shape[]&lt;/div&gt;&lt;div&gt;+ buy(int): boolean&lt;/div&gt;&lt;div&gt;+ endShopping()&lt;/div&gt;&lt;div&gt;+ isShopEmpty(): boolean&lt;/div&gt;&lt;div&gt;+ getShopItemCount(): int&lt;/div&gt;&lt;div&gt;+ getShopItemDescription(int): String&lt;/div&gt;&lt;div&gt;+ getShopItemPrice(int): int&lt;/div&gt;&lt;div&gt;- startPlaying()&lt;/div&gt;&lt;div&gt;+ play(Card, int)&lt;/div&gt;&lt;div&gt;+ stackIndexOutOfBounds(int): boolean&lt;/div&gt;&lt;div&gt;- cardIsNotOnHand(Card): boolean&lt;/div&gt;&lt;div&gt;- calcCredits()&lt;/div&gt;&lt;div&gt;+ getHandCardsCount(): int&lt;/div&gt;&lt;div&gt;+ getHandCard(int): Card&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="msibaPADLrbXCp9h_xWd-47" vertex="1">
-          <mxGeometry y="188" width="250" height="372" as="geometry" />
+          <mxGeometry y="228" width="250" height="372" as="geometry" />
         </mxCell>
         <mxCell id="msibaPADLrbXCp9h_xWd-51" value="&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;div&gt;Mode&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;labelBackgroundColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-628" y="960" width="140" height="80" as="geometry" />
@@ -266,6 +266,18 @@
         </mxCell>
         <mxCell id="sl92Uqs-ZGOxor6MEnUH-25" value="&lt;div&gt;+ Tripel(Shape): void&lt;/div&gt;&lt;div&gt;+ calcCredits(DiscardPile[]): double&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="sl92Uqs-ZGOxor6MEnUH-23">
           <mxGeometry y="34" width="160" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="sl92Uqs-ZGOxor6MEnUH-40" value="CardFactory" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-513" y="-10" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sl92Uqs-ZGOxor6MEnUH-41" value="&lt;u&gt;- defaultFactory: CardFactory&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="sl92Uqs-ZGOxor6MEnUH-40">
+          <mxGeometry y="26" width="200" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="sl92Uqs-ZGOxor6MEnUH-42" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;labelBackgroundColor=none;" vertex="1" parent="sl92Uqs-ZGOxor6MEnUH-40">
+          <mxGeometry y="60" width="200" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="sl92Uqs-ZGOxor6MEnUH-43" value="&lt;div&gt;+ createRandom(): Card&lt;/div&gt;&lt;div&gt;+ create(String, Shape): Card&lt;/div&gt;&lt;div&gt;&lt;i&gt;+ getDefaultFactory(): CardFactory&lt;/i&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="sl92Uqs-ZGOxor6MEnUH-40">
+          <mxGeometry y="68" width="200" height="62" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
