@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-07T07:52:39.313Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="j98j8w9xmpLdrhJeNYd8" version="24.2.8" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-07T09:14:23.087Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="TevFZ1mvtgD6nZy-wCO9" version="24.2.8" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="3577" dy="1754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="3635" dy="1785" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -310,7 +310,7 @@
         <mxCell id="Rn7y_KEpxqjUtlH8qK3z-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.513;entryY=1.008;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=0;endSize=10;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Rn7y_KEpxqjUtlH8qK3z-0" target="msibaPADLrbXCp9h_xWd-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Rn7y_KEpxqjUtlH8qK3z-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=diamondThin;startFill=1;startSize=10;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Rn7y_KEpxqjUtlH8qK3z-4" target="Rn7y_KEpxqjUtlH8qK3z-11">
+        <mxCell id="Rn7y_KEpxqjUtlH8qK3z-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=diamondThin;startFill=0;startSize=10;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Rn7y_KEpxqjUtlH8qK3z-4" target="Rn7y_KEpxqjUtlH8qK3z-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Rn7y_KEpxqjUtlH8qK3z-4" value="Bestenliste" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
