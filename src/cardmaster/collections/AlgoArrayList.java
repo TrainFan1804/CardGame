@@ -1,6 +1,9 @@
 package cardmaster.collections;
 
 import java.util.Random;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 import cardmaster.interfaces.Item;
 
 /**
@@ -10,17 +13,23 @@ import cardmaster.interfaces.Item;
  * @author ole
  * @since 12.03.2024
  */
-public class AlgoArrayList {
+
+public class AlgoArrayList<T> implements Iterable<T> {
 	
 	private int currentSize;
-	private Item[] items;
+	private Object[] data;
+	
+	public AlgoArrayList() {
+
+		this(100);
+	}
 	
 	/**
 	 * Erstelle eine neue AlgoArrayList mit der groesse 4.
 	 */
 	public AlgoArrayList(int size) {
 		
-		this.items = new Item[size];
+		this.data = new Object[size];
 	}
 	
 	/**
@@ -28,21 +37,21 @@ public class AlgoArrayList {
 	 * 
 	 * @param newItem Das Item, das neu in die ArrayList hinzugefuegt wird.
 	 */
-	public void add(Item newItem) {
+	public void add(Object newItem) {
 		
-		if (this.currentSize == this.items.length) {
+		if (this.currentSize == this.data.length) {
 			
-			Item[] temp = new Item[this.items.length + 1];
+			Object[] temp = new Object[this.data.length + 1];
 			
-			for (int i = 0; i < this.items.length; i++) {
+			for (int i = 0; i < this.data.length; i++) {
 				
-				temp[i] = this.items[i];
+				temp[i] = this.data[i];
 			}
 
-			this.items = temp;
+			this.data = temp;
 		}
 		
-		this.items[this.currentSize++] = newItem;
+		this.data[this.currentSize++] = newItem;
 	}
 
 	/**
@@ -51,14 +60,14 @@ public class AlgoArrayList {
 	 * @param index Der uebergebene Index.
 	 * @return Das Item an dem uebergebenen Index. Falls der Index nicht in der ArrayList liegt, wird {@code null} zurueck gegeben.
 	 */
-	public Item getItemAtIndex(int index) {
-		
-		if (index >= this.currentSize) {
+	public Object getItemAtIndex(int index) {
 
-			return null;
+		if (index >= this.currentSize || index < 0) {
+
+			throw new IndexOutOfBoundsException();
 		}
 
-		return this.items[index];
+		return this.data[index];
 	}
 	
 	/**
@@ -77,7 +86,7 @@ public class AlgoArrayList {
 	 * 			Gibt {@code false} zurueck, wenn das Item nicht geloescht wurden konnte. Dies tritt auf, wenn
 	 * 			das Item nicht in der ArrayList ist.
 	 */
-	public boolean delete(Item item) {
+	public boolean delete(Object item) {
 
 		int index = this.getIndexFromItem(item);
 
@@ -99,11 +108,11 @@ public class AlgoArrayList {
 			return false;
 		}
 		
-		for (int i = index; i < this.items.length - 1; i++) {
+		for (int i = index; i < this.data.length - 1; i++) {
 			
-			this.items[i] = this.items[i + 1];
+			this.data[i] = this.data[i + 1];
 		}
-		this.items[this.items.length - 1] = null;
+		this.data[this.data.length - 1] = null;
 		
 		this.currentSize--;
 		return true;
@@ -115,11 +124,11 @@ public class AlgoArrayList {
 	 * @param item Das Item, das auf ihren Index geprueft wird.
 	 * @return Den Index des uebergebenen Item. Falls die Karte nicht in der ArrayList vorhanden ist, wird {@code -1} zurueck gegeben.
 	 */
-	public int getIndexFromItem(Item item) {
+	public int getIndexFromItem(Object item) {
 
 		for (int i = 0; i < this.currentSize; i++) {
 
-			if (this.items[i].equals(item)) {
+			if (this.data[i].equals(item)) {
 
 				return i;
 			}
@@ -133,37 +142,95 @@ public class AlgoArrayList {
 	 */
 	public void clear() {
 
-		this.items = new Item[this.items.length];
+		this.data = new Object[this.data.length];
 		this.currentSize = 0;
 	}
 
-	public Item[] toArray() {
+	/**
+	 * Erstellt ein Object Array. Das geliferte Array ist eine Kopie
+	 * 
+	 * @return Eine Array representation von dem internen array
+	 */
+	public Object[] toArray() {
 
-		Item[] temp = new Item[this.currentSize];
+		Object[] temp = new Object[this.currentSize];
 		
-		for (int i = 0; i < this.items.length; i++) {
+		for (int i = 0; i < this.data.length; i++) {
 
-			if (this.items[i] != null) {
+			if (this.data[i] != null) {
 
-				temp[i] = this.items[i];
+				temp[i] = this.data[i];
 			}
 		}
 
 		return temp;
 	}
 
+	/**
+	 * Sortiert das interne Array mit dem Bubblesort algortimus
+	 */
+	@SuppressWarnings("unchecked")
+	public void sort() {
+		boolean swapped;
+
+		for (int i = 0; i < currentSize - 1; i++) {
+
+			swapped = false;
+			for (int j = 0; j < currentSize - 1 - i; j++) {
+
+				Comparable<T> current = (Comparable<T>) this.data[j];
+				T next = (T) this.data[j + 1];
+			
+				if (current.compareTo(next) > 0) {
+
+
+					T temp = (T) this.data[j];
+					this.data[j] = this.data[j + 1];
+					this.data[j + 1] = temp;
+					swapped = true;
+				}
+			}
+
+			if (!swapped) break; // Keine Änderungen, also abbruch der Schleife
+		}
+	}
+	
+	/**
+	 * Mischt das interne Array in einer zufälligen Reihenfolge
+	 */
 	void shuffle() {
 
 		int index;
-        Item temp;
+        Object temp;
         Random random = new Random();
         for (int i = this.currentSize - 1; i > 0; i--) {
             index = random.nextInt(i + 1);
-            temp = this.items[index];
-            this.items[index] = this.items[i];
-            this.items[i] = temp;
+            temp = this.data[index];
+            this.data[index] = this.data[i];
+            this.data[i] = temp;
         }
 
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+            private int currentIndex = 0;
+
+            @Override
+            public boolean hasNext() {
+                return currentIndex < currentSize && data[currentIndex] != null;
+            }
+
+            
+			@Override
+            public T next() {
+                if (!hasNext()) {
+                    throw new NoSuchElementException();
+                }
+                return (T)data[currentIndex++];
+            }
+        };
+	}
 }

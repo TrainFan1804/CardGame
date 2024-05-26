@@ -1,8 +1,5 @@
 package cardmaster;
 
-import java.util.ArrayList;
-import java.util.List;
-
 //java import
 import cardmaster.collections.AlgoArrayList;
 import cardmaster.interfaces.Item;
@@ -11,6 +8,7 @@ import cardmaster.interfaces.Item;
  * @author g.ary, o.le
  * @since 13.03.2024
  */
+@SuppressWarnings("rawtypes")
 public class Shop {
     
     private static final int DEFAULT_SIZE = 8;
@@ -27,38 +25,54 @@ public class Shop {
         this.maxShopSize = DEFAULT_SIZE;
     }
 
+    /**
+     * Fügt ein Item in dem Shop hinzu
+     * 
+     * @param item
+     * @param calculationValue für die Methode calcPrice
+     */
     public void addItem(Item item, double calculationValue) {
 
         item.calcPrice(calculationValue);
         this.shopItems.add(item);
     }
 
+    /**
+     * Kauft ein Item aus dem Shop und gibt es auch zurück
+     * 
+     * @param shopItemIndex
+     * @return gekauftes Item
+     */
     public Item buy(int shopItemIndex) {
 
         if (shopItemIndex < this.shopItems.size() && 
             this.shopItems.getItemAtIndex(shopItemIndex) != null) {
 
-            Item temp = this.shopItems.getItemAtIndex(shopItemIndex);
+            Object temp = this.shopItems.getItemAtIndex(shopItemIndex);
 
 
             
             this.shopItems.delete(shopItemIndex);
-            return temp;
+            return (Item)temp;
         }
 
         return null;
     }
 
-    public boolean depositDrawPile() {
-
-        return false;
-    }
-
+    /**
+     * Prüft ob der Shop leer ist.
+     * 
+     * @return boolean
+     */
     public boolean isEmpty() {
 
         return this.shopItems.size() == 0;
     }
 
+    /**
+     * 
+     * @return die Menge an Items im Shop
+     */
     public int getItemCount() {
         int o = 0;
 
@@ -80,34 +94,27 @@ public class Shop {
 
         if (shopItemIndex >= 0 && shopItemIndex < this.shopItems.size()) {
 
-            return this.shopItems.getItemAtIndex(shopItemIndex).toString(); 
+            return this.itemPrice(shopItemIndex) + " " + this.shopItems.getItemAtIndex(shopItemIndex).toString(); 
         }
 
-        return null;
+        throw new IndexOutOfBoundsException();
     }
 
-    public List<Item> getItems() {
-        List<Item> items = new ArrayList<>();
-        for (int i = 0; i < shopItems.size(); i++) {
-            if (shopItems.getItemAtIndex(i) != null) {
-                items.add(shopItems.getItemAtIndex(i));
-            }
-        }
-        return items;
-    }
-
-    // public Item getItems() {
-
-    //     Item[] items = new Item[this.shopItems.size()];
-
-    //     for (Item item : this.shopItems)
-    // }
+    /**
+     * 
+     * @param shopItemIndex
+     * @return Preis des Items an dem Index
+     */
     public int itemPrice(int shopItemIndex) {
 
-        Item item = this.shopItems.getItemAtIndex(shopItemIndex);
+        
+        Item item = (Item)this.shopItems.getItemAtIndex(shopItemIndex);
         return item.getPrice();
     }
 
+    /**
+     * Cleart die Items im Shop
+     */
     public void clearShopItems() {
 
         for (int i = this.getItemCount(); i > 0; i--) {
@@ -116,13 +123,29 @@ public class Shop {
         }
     }
 
+    /** 
+     * @return maximale Größe des Shops
+     */
     public int getSize() {
 
         return this.maxShopSize;
     }
 
+    /**
+     * Erhöht die Größe des Shops um 1
+     */
     public void sizeUpgrade() {
         
         this.maxShopSize++;
+    }
+
+    /**
+	 * Liefert alle Items aus dem Shop zurück
+	 * 
+	 * @return Alle Items aus dem Shop als Array
+	 */
+    public Object[] getAllItems() {
+
+        return this.shopItems.toArray();
     }
 }

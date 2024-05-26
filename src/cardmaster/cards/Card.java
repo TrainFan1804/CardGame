@@ -1,6 +1,5 @@
 package cardmaster.cards;
 
-
 import java.util.Objects;
 // java import
 import java.util.Random;
@@ -40,18 +39,25 @@ public abstract class Card implements Item {
 		this.name = name;
 	}
 
-	public abstract double calcCredits(DiscardPile[] discardPiles);
-	
 	/**
-	 * Gibt die Form der Karte zurück.
+	 * Berechnet credits beim legen von Karten und diese werden dann bei dem Spieler
+	 * hinzuaddiert
+	 * 
+	 * @param discardPiles
+	 * @return credits
+	 */
+	public abstract double calcCredits(DiscardPile[] discardPiles);
+
+	/**
+	 * @return Gibt die Form der Karte zurück.
 	 */
 	public Shape getShape() {
-		
+
 		return this.shape;
 	}
 
 	/**
-	 * Gibt den Namen der Karte zurück. z.B.: Chance
+	 * @return Gibt den Namen der Karte zurück. z.B.: Chance
 	 */
 	public String getName() {
 
@@ -60,52 +66,55 @@ public abstract class Card implements Item {
 
 	@Override
 	public int getPrice() {
-		
+
 		return this.price;
 	}
 
+	@Override
 	public String toString() {
 
 		return this.shape.toString() + " " + this.name;
 	}
 
-	
-    public void calcPrice(double credits) {
+	@Override
+	public void calcPrice(double credits) {
 
 		Random random = new Random();
-        
+
 		double basePrice = credits / 4;
 
-        double variation = (random.nextDouble(0.8, 1.2));
+		double variation = (random.nextDouble(0.8, 1.2));
 
-        basePrice *= variation;
-        basePrice += ((double) random.nextInt(3) - 1);
+		basePrice *= variation;
+		basePrice += ((double) random.nextInt(3) - 1);
 
-        int finalPrice = (int) Math.round(basePrice);
-        
-        if (finalPrice < 1) {
+		int finalPrice = (int) Math.round(basePrice);
 
-            this.price = 1;
+		if (finalPrice < 1) {
+
+			this.price = 1;
 			return;
-        }
+		}
 
 		this.price = finalPrice;
-    }
+	}
 
-    @Override
-    public boolean equals(Object obj) {
+	@Override
+	public boolean equals(Object obj) {
 
-        if (this == obj) return true;
+		if (this == obj)
+			return true;
 
-        if (obj == null || getClass() != obj.getClass()) return false;
+		if (obj == null || getClass() != obj.getClass())
+			return false;
 
-        Card card = (Card) obj;
-        return shape == card.shape && name.equals(card.name);
-    }
+		Card card = (Card) obj;
+		return shape == card.shape && name.equals(card.name);
+	}
 
-    @Override
-    public int hashCode() {
-		
-        return Objects.hash(name, shape);
-    }
+	@Override
+	public int hashCode() {
+
+		return Objects.hash(name, shape);
+	}
 }

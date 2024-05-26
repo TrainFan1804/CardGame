@@ -10,6 +10,7 @@ import cardmaster.collections.AlgoArrayList;
  * @author o.le
  * @since 13.03.2024
  */
+@SuppressWarnings("rawtypes")
 public class Hand {
     
     private static final int DEFAULT_MAX_SIZE = 4;
@@ -26,6 +27,9 @@ public class Hand {
         this.currentMaxHandSize = DEFAULT_MAX_SIZE;
     }
 
+    /**
+     * Setzt daS Upgrade für die Handgröße um, indem die HandSize um 1 erhöht wird
+     */
     public void sizeUpgrade() {
 
         this.currentMaxHandSize++;
@@ -91,4 +95,24 @@ public class Hand {
         return this.handCards.getIndexFromItem(card) >= 0;
     }
 
+    public Card[] getAllHandCards() {
+
+        Card[] cardsArray = new Card[this.handCards.size()];
+        
+        for (int i = 0; i < cardsArray.length; i++) {
+            
+            cardsArray[i] = (Card) this.handCards.getItemAtIndex(i);
+        }
+        return cardsArray;
+    }
+
+    public int size() {
+        
+        return handCards.size();
+    }
+
+    public int getMaxHandCards() {
+
+        return this.currentMaxHandSize;
+    }
 }

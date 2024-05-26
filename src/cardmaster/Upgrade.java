@@ -7,6 +7,7 @@ public class Upgrade implements Item {
     private UpgradeDescriptions description;
     private double price;
 
+    @Override
     public int getPrice() {
         return (int)price;
     }
@@ -16,15 +17,19 @@ public class Upgrade implements Item {
         this.description = upgradeName;
     }
 
+    
     public UpgradeDescriptions getDescription() {
+
         return description;
     }
 
     @Override
     public String toString() {
-        return description.getDescription();
+
+        return "(" + this.price + ") " + description.getDescription();
     }
 
+    @Override
     public void calcPrice(double timesPurchased) {
         
         if (timesPurchased == 0) {
@@ -34,6 +39,11 @@ public class Upgrade implements Item {
         }
     }
 
+    /**
+     * ENUMS für die Upgrades im Shop
+     * <p>
+     * Ein getter für die Beschreibung des Upgrades vorhanden
+     */
     public enum UpgradeDescriptions {
     
         ADD_SHOP("Additional card in shop"), 
@@ -47,6 +57,10 @@ public class Upgrade implements Item {
             this.description = description;
         }
 
+        /**
+         * Getter für die Upgradebeschreibung
+         * @return Beschreibung des Upgrades
+         */
         public String getDescription() {
 
             return this.description;

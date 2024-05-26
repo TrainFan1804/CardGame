@@ -5,6 +5,11 @@ import cardmaster.Shape;
 
 public class Paar extends Card {
 
+    /**
+     * Generiert eine Paar Karte mit einer bestimmten Shape
+     * 
+     * @param shape Die Shape der neuen Karte
+     */
     public Paar(Shape shape) {
 
         super(shape, "Paar");
