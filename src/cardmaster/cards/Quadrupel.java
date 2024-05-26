@@ -3,16 +3,16 @@ package cardmaster.cards;
 import cardmaster.DiscardPile;
 import cardmaster.Shape;
 
-public class Tripel extends Card {
+public class Quadrupel extends Card{
 
     /**
-     * Generiert eine Tripel Karte mit einer bestimmten Shape
+     * Generiert eine Quadrupel Karte mit einer bestimmten Shape
      * 
      * @param shape Die Shape der neuen Karte
      */
-    public Tripel(Shape shape) {
-        
-        super(shape, "Tripel");
+    public Quadrupel(Shape shape) {
+
+        super(shape, "Quadrupel");
     }
 
     @Override
@@ -25,7 +25,7 @@ public class Tripel extends Card {
                 countSameShape++;
             }
         }
-        return (countSameShape / 3) * 5; 
+        return (countSameShape / 4) * 10; // Für jedes Paar 2 Punkte
     }
     
 }

@@ -3,8 +3,16 @@ package cardmaster.cards;
 import cardmaster.DiscardPile;
 import cardmaster.Shape;
 
+/**
+ * Eine Chance Karte
+ */
 public class Chance extends Card {
 
+    /**
+     * Generiert eine Chance Karte mit einer bestimmten Shape
+     * 
+     * @param shape Die Shape der neuen Karte
+     */
     public Chance(Shape shape) {
         
         super(shape, "Chance");

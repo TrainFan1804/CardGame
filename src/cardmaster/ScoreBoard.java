@@ -6,6 +6,8 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
+import cardmaster.scoreboard.Bestenliste;
+
 /**
  * Singleton für das Verwalten einer Bestenliste. Jeder Eintrag setzt sich aus
  * dem finalen Punktestand des Spiels, einem Zeitstempel und dem aktuellen Platz
@@ -86,7 +88,8 @@ public interface ScoreBoard {
 	 * Gibt die eine Instanz der {@link ScoreBoard}-Implementierung zurück.
 	 */
 	static ScoreBoard getInstance() {
-		return null; // TODO
+
+		return Bestenliste.getInstance();
 	}
 
 	/**
