@@ -21,7 +21,6 @@ public class GameGui extends Application {
         
         Game game = new Game(5, CardFactory.getDefaultFactory());
         FXMLLoader loader = new FXMLLoader(getClass().getResource("resources/GameGUI.fxml"));
-
         
         Parent parent = loader.load();
 
@@ -40,6 +39,10 @@ public class GameGui extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("resources/ScoreboardGUI.fxml"));
         Parent parent = loader.load();
 
+        // Scene scene = new Scene(parent);
+        // scene.getStylesheets().add("resources/styles.css");
+
+        // stage.setScene(scene);
         stage.setScene(new Scene(parent));
         stage.show();
         stage.setTitle("Just another CardGame - Scoreboard");
