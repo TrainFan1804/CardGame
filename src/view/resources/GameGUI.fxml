@@ -52,7 +52,7 @@
       </VBox>
    </left>
    <center>
-      <VBox fx:id="pileArea" prefHeight="3500.0" BorderPane.alignment="CENTER">
+      <VBox fx:id="pileArea" prefHeight="3500.0" BorderPane.alignment="CENTER" stylesheets="@styles.css">
          <children>
             <Label alignment="CENTER" prefHeight="51.0" prefWidth="4170.0" text="Ablagestapel">
                <font>
