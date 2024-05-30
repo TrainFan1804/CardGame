@@ -331,6 +331,7 @@ public class TestScoreBoardOLD {
 		assertTrue("read must call close", closed[0]);
 	}
 
+	@SuppressWarnings("unused")
 	final static class NotAllowedClass implements Serializable {
 
 		@Serial
