@@ -1,0 +1,7 @@
+.list-cell {
+    -fx-font-size: 20px;
+}
+
+.highlight {
+    -fx-background-color: yellow
+}
